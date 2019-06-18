@@ -1,0 +1,28 @@
+<nav class="main-nav navbar navbar-expand bg-white" typeof="SiteNavigationElement">
+    <div class="navbar-collapse nav-holder">
+        <ul class="mx-auto nav-site scroll nav nav-tabs" style="border-bottom: none;">
+            {{ $currentNode := . }}
+            {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+            <li class="nav-item {{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
+            <a href="#" class="nav-link">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+            <ul class="sm list-unstyled" role="menu">
+                {{ range .Children }}
+                <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}><a class="nav-link" href="{{.URL}}"> {{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+            {{ else }}
+            <li class="nav-item">
+            <a class="nav-link" href="{{ .URL }}">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+            {{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</nav>

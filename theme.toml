@@ -1,0 +1,22 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Aurora"
+license = "MIT"
+licenselink = "https://github.com/gctools-outilsgc/aurora-design-system/blob/master/LICENSE"
+description = "Hugo variant for Aurora an Open source code library for building innovative websites."
+homepage = "http://github.com/sylus/aurora-hugo"
+tags = ["aurora"]
+features = ["aurora"]
+min_version = "0.3.3"
+
+[author]
+  name = "William Hearn"
+  homepage = ""
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""
+

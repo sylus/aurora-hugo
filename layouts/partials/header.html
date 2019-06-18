@@ -1,0 +1,17 @@
+
+        <header>
+            {{ partial "megamenu.html" . }}
+            <nav aria-label="breadcrumb">
+                <h2 class="sr-only">You are here:</h2>
+                <div class="container">
+                    {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+                    {{ $.Scratch.Add "path" .Site.BaseURL }}
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">Home</a></li>
+                        {{ if not .IsHome }}
+                            <li class="breadcrumb-item">&nbsp;{{ .Title }}</li>
+                        {{ end }}
+                    </ol>
+                </div>
+            </nav>
+        </header>

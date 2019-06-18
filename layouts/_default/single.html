@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+    {{- partial "skipnav.html" . -}}
+
+    {{- partial "header.html" . -}}
+
+    <main property="mainContentOfPage" class="container">
+
+        {{ .Content }}
+
+        {{- partial "mainfooter.html" . -}}
+
+    </main>
+
+    {{- partial "footer.html" . -}}
+
+{{ end }}

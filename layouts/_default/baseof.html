@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{{ `<!--[if lt IE 9]><html class="no-js lt-ie9"` | safeHTML }} lang="{{ .Lang }}"{{ ` dir="ltr">><![endif]-->` | safeHTML }}
+{{ `<!--[if gt IE 8]><!-->` | safeHTML }}
+<html class="no-js" lang="{{ .Lang }}"  {{/* dir="{{{i18n "lang-dir"}}}"  */}}>
+{{ `<!--<![endif]-->` | safeHTML }}
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+
+        {{- partial "license.html" . -}}
+
+        <title>{{ .Title }}</title>
+
+        {{- partial "metadata.html" . -}}
+        {{- partial "headresources.html" . -}}
+
+    </head>
+    <body vocab="http://schema.org/" typeof="WebPage">
+
+        {{- partial "bodyresources.html" . -}}
+
+        {{- block "main" . }}{{- end }}
+
+        {{- partial "footerresources.html" . -}}
+
+    </body>
+</html>

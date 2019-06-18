@@ -1,0 +1,20 @@
+image: registry.gitlab.com/pages/hugo:0.53
+
+test:
+  script:
+  - apk --update add git nodejs nodejs-npm yarn
+  - yarn install
+  - hugo
+  except:
+  - master
+
+pages:
+  script:
+  - apk --update add git nodejs nodejs-npm yarn
+  - yarn install
+  - hugo
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
