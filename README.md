@@ -5,6 +5,10 @@ Hugo variant for Aurora
 
 [Hugo][hugo] variant for Aurora
 
+## Example
+
+Please consult our [Digital Academy][aurora-website] site to see how this theme is implemented.
+
 ## Requirements
 
 The theme is built using the Aurora theme.
@@ -34,4 +38,5 @@ Simply follow the commands listed below given you have the appropriate files
 [nodejs]:               http://nodejs.org
 [travisci]:             http://travis-ci.org/sylus/aurora-hugo
 [travisci-badge]:       https://api.travis-ci.org/sylus/aurora-hugo.svg?branch=master
-[wet-boew-hugo]:        https://github.com/sylus/aurora-hugo
+[aurora-hugo]:          https://github.com/sylus/aurora-hugo
+[aurora-website]:       https://github.com/sylus/digital-academy
